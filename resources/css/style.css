@@ -121,7 +121,7 @@ h2:after {
     color: #66317c;
     font-size: 120%;
     margin-right: 10px;
-    
+
     /*secrets to align text and icons*/
     line-height: 120%;
     vertical-align: middle;
@@ -198,7 +198,7 @@ input[type=submit]:active {
 /* ----------------------------------------------- */
 
 header {
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero-min.jpg);
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/GcP71BP.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/GcP71BP.png);
     background-size: cover;
     background-position: center;
@@ -216,6 +216,21 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.hero-text-box span {
+  font-size:30%;
+  vertical-align: top;
+
+}
+
+.scroll-down {
+    font-size: 60%;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    right: 2%;
+}
+
+
 .logo {
     height: 125px;
     width: auto;
@@ -223,7 +238,7 @@ header {
     margin-top: 20px;
 }
 
-.logo-black { 
+.logo-black {
     display: none;
     height: 50px;
     width: auto;
@@ -366,22 +381,8 @@ header {
 
 .steps-box {
     margin-top: 30px;
-}
-
-
-.steps-box:first-child {
-    text-align: left;
-    padding-right: 3%;
-}
-
-.steps-box:last-child {
     text-align: left;
     padding-left: 3%;
-
-}
-
-.app-screen {
-    width: 40%;
 }
 
 .works-step {
@@ -404,17 +405,6 @@ header {
     margin-right: 25px;
     float: left;
     padding: 5px;
-}
-
-.btn-app:link,
-.btn-app:visited {
-    border: 0;
-}
-
-.btn-app img {
-    height: 50px;
-    width: auto;
-    margin-right: 10px;
 }
 
 
@@ -600,7 +590,7 @@ footer {
 }
 
 .footer-nav li a:link,
-.footer-nav li a:visited, 
+.footer-nav li a:visited,
 .social-links li a:link,
 .social-links li a:visited {
     text-decoration: none;
@@ -763,7 +753,7 @@ footer p {
     text-align: center;
 }
 
-.gallery a:link, 
+.gallery a:link,
 .gallery a:visited {
     border: 0;
 }
@@ -861,5 +851,3 @@ input[type="color"] {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
-
-
