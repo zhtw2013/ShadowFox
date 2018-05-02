@@ -121,3 +121,7 @@
     section { padding: 25px 0; }
     .contact-form {width: 100%; }
 }
+
+@media only screen and (max-height: 450px) {
+    .hero-text-box { margin-top: 40px; }
+}
