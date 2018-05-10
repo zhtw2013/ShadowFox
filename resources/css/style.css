@@ -192,6 +192,14 @@ input[type=submit]:active {
     color: #fff;
 }
 
+hr {
+    border-color: #727878;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+    width: 60%;
+    margin: 40px auto;
+}
+
 
 /* ----------------------------------------------- */
 /* HEADER */
@@ -702,6 +710,7 @@ footer p {
 .chrome-options li {
     list-style-type: none;
     margin-left: 50px;
+    font-size: 70%;
 }
 
 .row .cm-buttons {
@@ -714,6 +723,25 @@ footer p {
 
 .download-css-2 {
     margin-top: 10px;
+}
+
+.collapsible {
+    background-color: transparent;
+    color: var(--main-accent-1);
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 100%;
+}
+
+.content {
+    padding: 0px 25px;
+    max-height: 0;
+    margin-top: -2px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 
@@ -767,7 +795,7 @@ footer p {
     line-height: 200%;
 }
 
-.section-form .long-copy a {
+.long-copy a {
     border: 0;
 }
 

@@ -258,6 +258,10 @@
             <div class="row">
                 <button class="collapsible js--arrow-icon-1"><i class="ion-ios-arrow-right icon-small"></i>Color Customization</button>
                 <div class="content">
+                  <p class="long-copy">
+                    This section can be used to customize the colors utilized by ShadowFox.  Accent colors are used for things like buttons, links and tables. The drop down box can be used to darken ShadowFox by one shade. Only necessary changes are inserted into the text box. For more information, see <a href="https://github.com/overdodactyl/ShadowFox/wiki/Customization">here.</a>
+                  </p>
+                  <hr />
                   <div class="row color-options">
                     <div class="col span-2-of-3">
                         <input type="color" value="#45a1ff" id="accent-1"/>Accent 1
@@ -290,13 +294,30 @@
 
             <div class="row">
                 <button class="collapsible js--arrow-icon-2"><i class="ion-ios-arrow-right icon-small"></i>UI Customization &mdash; userChrome</button>
+
                 <div class="content">
                   <div class="row chrome-options">
 
                     <div class="col span-1-of-3 chrome-options">
+                      <button class="collapsible js--arrow-icon-3"><i class="ion-ios-arrow-right icon-small"></i>Tabs</button>
+                      <div class="content">
                         <li><input type="checkbox" id="roundedTabs">Rounded Tabs</li>
-                        <li><input type="checkbox" id="hideSidebar">Auto Hide Sidebar</li>
+                        <li><input type="checkbox" id="closeHover">Close Button on Hover</li>
+                        <li><input type="checkbox" id="greyscaleFavicons">Grayscale Favicons</li>
+                        <li><input type="checkbox" id="hideFavicons">Hide Favicons</li>
+                        <li><input type="checkbox" id="bottomMacos">Hide Favicons</li>
+                        <li><input type="checkbox" id="leftClose">X on left</li>
+                      </div>
+                      <button class="collapsible js--arrow-icon-4"><i class="ion-ios-arrow-right icon-small"></i>Toolbars</button>
+                      <div class="content">
                         <li><input type="checkbox" id="bookmarksNewTab">Bookmarks Bar Only on New Tab</li>
+                        <li><input type="checkbox" id="autoHide">Auto-hide Bookmarks and Url</li>
+                        <li><input type="checkbox" id="slidingBookmarks">Sliding Bookmarks Bar</li>
+                      </div>
+                      <button class="collapsible js--arrow-icon-5"><i class="ion-ios-arrow-right icon-small"></i>Sidebar</button>
+                      <div class="content">
+                        <li><input type="checkbox" id="hideSidebar">Auto Hide Sidebar</li>
+                      </div>
                     </div>
 
                     <div class="col span-2-of-3 cm-box">
@@ -326,7 +347,6 @@
             <div class="row">
                 <h2>Find a bug? Have a feature request? Have any questions? </h2>
                 <p class="long-copy">
-                <p class="long-copy">
                     Please first read through the <a href="https://github.com/overdodactyl/ShadowFox/wiki/" > GitHub Wiki </a>, which includes more detailed instructions and information, and take a look at any open <a href="https://github.com/overdodactyl/ShadowFox/issues" > issues </a>.  If you can't find a duplicate request, bug, or an answer to your question, please feel free to either:
                 </p>
                 <p class="long-copy bullets">
@@ -336,10 +356,6 @@
                 </p>
             </div>
         </section>
-
-
-
-
         <footer>
             <div class="row">
                 <div class="col span-1-of-2">

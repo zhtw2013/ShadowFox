@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    
-    
+
+
     /* For the sticky navigation */
     $('.js--section-features').waypoint(function(direction) {
         if (direction == "down") {
@@ -11,18 +11,18 @@ $(document).ready(function() {
     }, {
       offset: '60px;'
     });
-    
-    
+
+
     /* Scroll on buttons */
     $('.js--scroll-to-plans').click(function () {
-       $('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000); 
+       $('html, body').animate({scrollTop: $('.js--section-plans').offset().top}, 1000);
     });
-    
+
     $('.js--scroll-to-start').click(function () {
-       $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000); 
+       $('html, body').animate({scrollTop: $('.js--section-features').offset().top}, 1000);
     });
-    
-    
+
+
     /* Navigation scroll */
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
@@ -38,78 +38,81 @@ $(document).ready(function() {
         }
       });
     });
-    
-    
+
+
     /* Animations on scroll */
     $('.js--wp-1').waypoint(function(direction) {
         $('.js--wp-1').addClass('animated fadeIn');
     }, {
         offset: '50%'
     });
-    
+
     $('.js--wp-2').waypoint(function(direction) {
         $('.js--wp-2').addClass('animated fadeInUp');
     }, {
         offset: '50%'
     });
-    
+
     $('.js--wp-3').waypoint(function(direction) {
         $('.js--wp-3').addClass('animated fadeIn');
     }, {
         offset: '50%'
     });
-    
+
     $('.js--wp-4').waypoint(function(direction) {
         $('.js--wp-4').addClass('animated pulse');
     }, {
         offset: '50%'
     });
-    
-    
+
+
     /* Mobile navigation */
     $('.js--nav-icon').click(function() {
         var nav = $('.js--main-nav');
         var icon = $('.js--nav-icon i');
-        
+
         nav.slideToggle(200);
-        
+
         if (icon.hasClass('ion-navicon-round')) {
             icon.addClass('ion-close-round');
             icon.removeClass('ion-navicon-round');
         } else {
             icon.addClass('ion-navicon-round');
             icon.removeClass('ion-close-round');
-        }        
+        }
     });
-    
-    /* Mobile navigation */
+
+    /* Arrow Flip */
+    function switchArrow(arrow) {
+        var icon = $(arrow);
+
+        if (icon.hasClass('ion-ios-arrow-right')) {
+            console.log("has class!");
+            icon.addClass('ion-ios-arrow-down');
+            icon.removeClass('ion-ios-arrow-right');
+        } else {
+            icon.addClass('ion-ios-arrow-right');
+            icon.removeClass('ion-ios-arrow-down');
+        }
+    }
+
     $('.js--arrow-icon-1').click(function() {
-        var icon = $('.js--arrow-icon-1 i');
-
-        if (icon.hasClass('ion-ios-arrow-right')) {
-            console.log("has class!");
-            icon.addClass('ion-ios-arrow-down');
-            icon.removeClass('ion-ios-arrow-right');
-        } else {
-            icon.addClass('ion-ios-arrow-right');
-            icon.removeClass('ion-ios-arrow-down');
-        }        
+        switchArrow('.js--arrow-icon-1 i');
     });
-    
     $('.js--arrow-icon-2').click(function() {
-        var icon = $('.js--arrow-icon-2 i');
-
-        if (icon.hasClass('ion-ios-arrow-right')) {
-            console.log("has class!");
-            icon.addClass('ion-ios-arrow-down');
-            icon.removeClass('ion-ios-arrow-right');
-        } else {
-            icon.addClass('ion-ios-arrow-right');
-            icon.removeClass('ion-ios-arrow-down');
-        }        
+        switchArrow('.js--arrow-icon-2 i');
     });
-    
-    
+    $('.js--arrow-icon-3').click(function() {
+        switchArrow('.js--arrow-icon-3 i');
+    });
+    $('.js--arrow-icon-4').click(function() {
+        switchArrow('.js--arrow-icon-4 i');
+    });
+    $('.js--arrow-icon-5').click(function() {
+        switchArrow('.js--arrow-icon-5 i');
+    });
+
+
     var code = $('.codemirror-textarea')[0];
     var editor_1 = CodeMirror.fromTextArea(code, {
         lineNumbers : true,
@@ -124,26 +127,36 @@ $(document).ready(function() {
         theme: "shadowfox",
         readOnly: true
     });
-    
+
+
     $(document).on('click','.btn-insert-text', function(){
-        console.log("runningFunction!");
-        if ( $('#roundedTabs').prop('checked') == true ) {
-            insertText("/* MIT Copyright (c) 2017 Wilfred Wee; Code pulled from https://raw.githubusercontent.com/wilfredwee/photon-australis/master/userChrome-dark.css */", 1)
-            readTextFile("https://raw.githubusercontent.com/wilfredwee/photon-australis/master/userChrome-dark.css", 1)
-            
+      var uct = "/* GPL-3.9 Copyright (C) 2007 Timvde/UserChrome-Tweaks; Code pulled from https://github.com/Timvde/UserChrome-Tweaks */"
+      var dict = {
+        '#roundedTabs':["https://raw.githubusercontent.com/wilfredwee/photon-australis/master/userChrome-dark.css", "/* MIT Copyright (c) 2017 Wilfred Wee; Code pulled from https://raw.githubusercontent.com/wilfredwee/photon-australis/master/userChrome-dark.css */"],
+        '#hideSidebar':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/sidebar/auto-hide-sidebar.css", uct],
+        '#bookmarksNewTab':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/toolbars/show-bookmarks-only-on-newtab.css", uct],
+        '#closeHover':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/tabs/close-button-hover.css", uct],
+        '#greyscaleFavicons':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/tabs/grayscale-favicon.css", uct],
+        '#hideFavicons':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/tabs/hide-favicons.css", uct],
+        '#bottomMacos':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/tabs/tabs-on-bottom-macOS.css", uct],
+        '#leftClose':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/tabs/x-on-left.css", uct],
+        '#autoHide':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/toolbars/auto-hide.css", uct],
+        '#slidingBookmarks':["https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/toolbars/sliding-bookmarks-bar.css", uct]
+      }
+
+      for(var key in dict) {
+        if ( $(key).prop('checked') == true) {
+          var url = dict[key][0];
+          var licence = dict[key][1];
+          insertText(licence, 1)
+          readTextFile(url, 1)
         }
-        if ( $('#hideSidebar').prop('checked') == true ) {
-            insertText("/* GPL-3.9 Copyright (C) 2007 Timvde/UserChrome-Tweaks; Code pulled from https://github.com/Timvde/UserChrome-Tweaks */", 1)
-            readTextFile("https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/sidebar/auto-hide-sidebar.css", 1)
-            
+        else {
+          console.log("not checked");
         }
-        if ( $('#bookmarksNewTab').prop('checked') == true ) {
-            insertText("/* GPL-3.9 Copyright (C) 2007 Timvde/UserChrome-Tweaks; Code pulled from https://github.com/Timvde/UserChrome-Tweaks */", 1)
-            readTextFile("https://raw.githubusercontent.com/Timvde/UserChrome-Tweaks/master/toolbars/show-bookmarks-only-on-newtab.css", 1)
-        }
-        /*readTextFile("resources/files/sample.txt")
-        readTextFile("https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/css/common-files/color_variables.css")*/
+      }
     })
+
     /*readTextFile("https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/css/common-files/color_variables.css", 1)*/
     function readTextFile(file, num)
         {
@@ -162,7 +175,7 @@ $(document).ready(function() {
             }
             rawFile.send(null);
         }
-    
+
     /* Get primary color */
     $(document).on('click','.insert-color', function(){
         var accent1 = document.getElementById("accent-1").value;
@@ -189,9 +202,9 @@ $(document).ready(function() {
             insertText("--tone-8: var(--grey-90);", 0);
             insertText("--tone-8: #fff;", 0);
         }
-        
+
     })
-    
+
 
     // Begin inputting of clicked text into editor
     function insertText(data, num) {
@@ -211,30 +224,30 @@ $(document).ready(function() {
             doc.replaceRange("\n" + data, pos);
         }
     }
-    
+
     /* Clear Code Editor */
     $(document).on('click','.btn-remove-text', function(){
         editor_1.getDoc().setValue('');
     })
-    
+
     /* Clear Code Editor */
     $(document).on('click','.btn-remove-code', function(){
         readOnlyColors.getDoc().setValue('');
     })
-    
+
     /* Clear Checkboxes */
     $(document).on('click','.clear-boxes', function(){
         $('.chrome-options input[type=checkbox]').prop('checked',false);
     })
-    
+
     /* Reset Colors */
     $(document).on('click','.clear-colors', function(){
-         document.getElementById("accent-1").value = "#45a1ff"; 
-         document.getElementById("accent-2").value = "#0a84ff"; 
+         document.getElementById("accent-1").value = "#45a1ff";
+         document.getElementById("accent-2").value = "#0a84ff";
          document.getElementById("accent-3").value = "#0060df";
          document.getElementById("shade").value    = "default";
     })
-    
+
     // Function to download data to a file
     function download(data, filename, type) {
         var file = new Blob([data], {type: type});
@@ -249,22 +262,22 @@ $(document).ready(function() {
             a.click();
             setTimeout(function() {
                 document.body.removeChild(a);
-                window.URL.revokeObjectURL(url);  
-            }, 0); 
+                window.URL.revokeObjectURL(url);
+            }, 0);
         }
     }
-    
+
     /* Download CSS */
     $(document).on('click','.download-css', function(){
         var data = editor_1.getValue();
         download(data, "colorOverrides.css", "css")
     })
-    
+
     $(document).on('click','.download-css-2', function(){
         var data = readOnlyColors.getValue();
         download(data, "userChrome_customization.css", "css")
     })
-    
+
     $('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
@@ -282,9 +295,9 @@ $(document).ready(function() {
             }
         }
     });
-    
-    
-    
+
+
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -296,20 +309,20 @@ $(document).ready(function() {
           content.style.maxHeight = null;
         } else {
           content.style.maxHeight = content.scrollHeight + "px";
-        } 
+        }
       });
     }
 
-    
-    
-    
-    
-    
-    
-    
-    
 
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
 });
