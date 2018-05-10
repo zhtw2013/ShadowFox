@@ -1,9 +1,6 @@
 /*
-Orange color: #e67e22
 Purple color: #66317c
-
 */
-
 
 /* ----------------------------------------------- */
 /* BASIC SETUP */
@@ -382,7 +379,7 @@ header {
 
 
 /* ----------------------------------------------- */
-/* MEALS */
+/* Images */
 /* ----------------------------------------------- */
 
 .section-images {
@@ -424,21 +421,6 @@ header {
 
 
 /* ----------------------------------------------- */
-/* CITIES */
-/* ----------------------------------------------- */
-
-.box img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.city-feature {
-    margin-bottom: 5px;
-}
-
-
-/* ----------------------------------------------- */
 /* TESTIMONIALS */
 /* ----------------------------------------------- */
 
@@ -473,13 +455,6 @@ cite {
     display: block;
 }
 
-cite img {
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 10px;
-    vertical-align: middle;
-}
-
 
 /* ----------------------------------------------- */
 /* SIGN UP */
@@ -489,7 +464,7 @@ cite img {
     background-color: #151515;
 }
 
-.plan-box {
+.os-box {
     background-color: #121212;
     border-radius: 5px;
     width: 90%;
@@ -497,49 +472,32 @@ cite img {
     box-shadow: 0 2px 2px #1c1c1c;
 }
 
-.plan-box div {
+.os-box div {
     padding: 15px;
     border-bottom: 1px solid #2e2e2e;
 }
 
-.plan-box div:first-child {
+.os-box div:first-child {
     background-color: #141414;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.plan-box div:last-child {
+.os-box div:last-child {
     text-align: center;
     border: 0;
 }
 
-
-.plan-price {
-    font-size: 300%;
-    margin-bottom: 10px;
-    font-weight: 100;
-    color: #e67e22;
-}
-
-.plan-price span {
-    font-size: 30%;
-    font-weight: 300;
-}
-
-.plan-price-meal {
-    font-size: 80%;
-}
-
-.plan-box ul {
+.os-box ul {
     list-style: none;
 }
 
-.plan-box ul li {
+.os-box ul li {
     padding: 5px 0;
     text-align: left;
 }
 
-.plan-box a {
+.os-box a {
     border: 0;
 }
 
@@ -548,164 +506,11 @@ cite img {
 /* FORM */
 /* ----------------------------------------------- */
 
-.contact-form {
-    width: 60%;
-    margin: 0 auto;
-}
-
-input[type=text],
-input[type=email],
-textarea {
-    width: 100%;
-    padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-}
-
-textarea {
-    height: 100px;
-}
-
 input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
 
 *:focus {outline: none;}
-
-
-/* ----------------------------------------------- */
-/* FOOTER */
-/* ----------------------------------------------- */
-
-footer {
-    background-color: #020202;
-    padding: 50px;
-    font-size: 80%;
-}
-
-.footer-nav {
-    list-style: none;
-    float: left;
-}
-
-.social-links {
-    list-style: none;
-    float: right;
-}
-
-.footer-nav li,
-.social-links li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.footer-nav li:last-child,
-.social-links li:last-child {
-    margin-right: 0;
-}
-
-.footer-nav li a:link,
-.footer-nav li a:visited,
-.social-links li a:link,
-.social-links li a:visited {
-    text-decoration: none;
-    border: 0;
-    color: #888;
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-}
-
-.footer-nav li a:hover,
-.footer-nav li a:active {
-    color: #ddd;
-}
-
-.social-links li a:link,
-.social-links li a:visited {
-    font-size: 160%;
-}
-
-.ion-social-facebook,
-.ion-social-twitter,
-.ion-social-googleplus,
-.ion-social-instagram {
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s;
-}
-
-.social-links li:last-child {
-    transform: rotate(72deg);
-}
-
-.ion-social-github:hover {
-    color: #4078c0;
-}
-
-.ion-social-reddit:hover {
-    color: #ff4500;
-}
-
-.ion-pound:hover {
-    color: #e9a820;
-}
-
-
-footer p {
-    color: #888;
-    text-align: center;
-    margin-top: 20px;
-}
-
-
-
-.cm-box {
-    font-size: 70%;
-}
-
-.insert-options {
-    list-style: none;
-}
-
-.test-case-box {
-    height: 250px;
-    background-color: #38383d;
-    color: #b1b1b3;
-    padding: 7px;
-    font-family: -moz-use-system-font;
-    font-size: 15px;
-}
-
-.test-case-box span {
-    color: #45a1ff;
-    text-decoration: underline;
-}
-
-.test-case-box .btn {
-    height: 30px;
-    min-width: 150px;
-    margin-top: 10px;
-    border-radius: 4px;
-    border-color: #737373;
-    color: #b1b1b3;
-    text-align: center;
-    padding: 6px;
-}
-
-.test-case-box .btn:hover {
-    background-color: #4a4a4f;
-}
-
-.test-case-box .btn-full {
-    background-color: #0a84ff;
-    border-color: #0a84ff;
-    color: #ededf0;
-}
-
-.test-case-box .btn-full:hover {
-    background-color: #0060df;
-    border-color: #0060df;
-}
-
 
 /* ----------------------------------------------- */
 /* UI CHANGES */
@@ -889,4 +694,94 @@ input[type="color"] {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+/* ----------------------------------------------- */
+/* FOOTER */
+/* ----------------------------------------------- */
+
+footer {
+    background-color: #020202;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-reddit,
+.ion-social-github,
+.ion-pound {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.social-links li:last-child {
+    transform: rotate(72deg);
+}
+
+.ion-social-github:hover {
+    color: #4078c0;
+}
+
+.ion-social-reddit:hover {
+    color: #ff4500;
+}
+
+.ion-pound:hover {
+    color: #e9a820;
+}
+
+
+.cm-box {
+    font-size: 70%;
+}
+
+.insert-options {
+    list-style: none;
 }
