@@ -85,9 +85,7 @@ $(document).ready(function() {
     /* Arrow Flip */
     function switchArrow(arrow) {
         var icon = $(arrow);
-
         if (icon.hasClass('ion-ios-arrow-right')) {
-            console.log("has class!");
             icon.addClass('ion-ios-arrow-down');
             icon.removeClass('ion-ios-arrow-right');
         } else {
@@ -151,30 +149,23 @@ $(document).ready(function() {
           insertText(licence, 1)
           readTextFile(url, 1)
         }
-        else {
-          console.log("not checked");
-        }
       }
     })
 
-    /*readTextFile("https://raw.githubusercontent.com/overdodactyl/ShadowFox/master/css/common-files/color_variables.css", 1)*/
-    function readTextFile(file, num)
-        {
-            var rawFile = new XMLHttpRequest();
-            rawFile.open("GET", file, false);
-            rawFile.onreadystatechange = function ()
-            {
-                if(rawFile.readyState === 4)
-                {
-                    if(rawFile.status === 200 || rawFile.status == 0)
-                    {
-                        var allText = rawFile.responseText;
-                        insertText(allText, num);
-                    }
-                }
-            }
-            rawFile.send(null);
+
+    function readTextFile(file, num) {
+      var rawFile = new XMLHttpRequest();
+      rawFile.open("GET", file, false);
+      rawFile.onreadystatechange = function () {
+        if(rawFile.readyState === 4) {
+          if(rawFile.status === 200 || rawFile.status == 0) {
+            var allText = rawFile.responseText;
+            insertText(allText, num);
+          }
         }
+      }
+      rawFile.send(null);
+    }
 
     /* Get primary color */
     $(document).on('click','.insert-color', function(){
@@ -296,8 +287,6 @@ $(document).ready(function() {
         }
     });
 
-
-
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -312,17 +301,5 @@ $(document).ready(function() {
         }
       });
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 });
