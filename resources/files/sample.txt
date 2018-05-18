@@ -1,4 +1,0 @@
-/* Alter urlbar */
-#urlbar {
-	background: red;
-}

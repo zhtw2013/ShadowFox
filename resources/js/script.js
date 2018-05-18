@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  // Check for the various File API support.
+  if (window.File && window.FileReader && window.FileList && window.Blob) {
+    // Great success! All the File APIs are supported.
+  } else {
+    alert('The File APIs are not fully supported in this browser.');
+  }
 
     /* For the sticky navigation */
     $('.js--section-features').waypoint(function(direction) {
@@ -297,7 +303,7 @@ $(document).ready(function() {
         if (content.style.maxHeight){
           content.style.maxHeight = null;
         } else {
-          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.maxHeight = "29000000px";
         }
       });
     }
