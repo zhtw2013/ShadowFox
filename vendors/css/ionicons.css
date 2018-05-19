@@ -32,7 +32,8 @@
 .ion-ios-arrow-down:before,
 .ion-social-github:before,
 .ion-social-reddit:before,
-.ion-pound:before {
+.ion-pound:before,
+.ion-navicon-round:before {
   display: inline-block;
   font-family: "Ionicons";
   speak: none;
@@ -62,3 +63,4 @@
 .ion-social-github:before{content:"\f233"}
 .ion-social-reddit:before{content:"\f23b"}
 .ion-pound:before{content:"\f219"}
+.ion-navicon-round:before{content:"\f20d"}
