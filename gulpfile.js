@@ -5,6 +5,7 @@ var log = require('fancy-log');
 var concatCss = require('gulp-concat-css');
 var cleanCSS = require('gulp-clean-css');
 var rename = require('gulp-rename');
+var purify = require('gulp-purifycss');
 var critical = require('critical').stream;
 
 
@@ -38,3 +39,14 @@ gulp.task('critical', function () {
         .pipe(rename("index.html"))
         .pipe(gulp.dest('.'));
 });
+
+gulp.task('purify', function() {
+  return gulp.src('vendors/css/combined.css')
+    .pipe(purify(['vendors/js/*.js', 'resources/js/*.js', 'basic.js']))
+    .pipe(gulp.dest(function(file) {
+      return file.base;
+    }));
+});
+
+
+gulp.task('publish', gulp.series('combine', 'minify-css', 'critical', 'purify'));
