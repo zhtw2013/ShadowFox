@@ -243,9 +243,9 @@
         <hr>
         <div class="row color-options">
           <div class="col span-2-of-3">
-            <input type="color" value="#45a1ff" id="accent-1">Accent 1
-            <input type="color" value="#0a84ff" id="accent-2">Accent 2
-            <input type="color" value="#0060df" id="accent-3">Accent 3
+            <label><input type="color" value="#45a1ff" id="accent-1">Accent 1</label>
+            <label><input type="color" value="#0a84ff" id="accent-2">Accent 2</label>
+            <label><input type="color" value="#0060df" id="accent-3">Accent 3</label>
             <select name="shade" id="shade">
               <option value="default" selected>Default</option>
               <option value="darker">One shade darker</option>
@@ -280,22 +280,28 @@
           <div class="col span-1-of-3 chrome-options">
             <button class="collapsible js--arrow-icon-3  ui-section"><i class="ion-ios-arrow-right icon-small"></i>Tabs</button>
             <div class="content">
-              <li><input type="checkbox" id="roundedTabs">Rounded Tabs</li>
-              <li><input type="checkbox" id="closeHover">Close Button on Hover</li>
-              <li><input type="checkbox" id="greyscaleFavicons">Grayscale Favicons</li>
-              <li><input type="checkbox" id="hideFavicons">Hide Favicons</li>
-              <li><input type="checkbox" id="bottomMacos">Hide Favicons</li>
-              <li><input type="checkbox" id="leftClose">X on left</li>
+              <ul style="list-style-type:none; padding-left: 0">
+                <li><label><input type="checkbox" id="roundedTabs">Rounded Tabs</label></li>
+                <li><label><input type="checkbox" id="closeHover">Close Button on Hover</label></li>
+                <li><label><input type="checkbox" id="greyscaleFavicons">Grayscale Favicons</label></li>
+                <li><label><input type="checkbox" id="hideFavicons">Hide Favicons</label></li>
+                <li><label><input type="checkbox" id="bottomMacos">Hide Favicons</label></li>
+                <li><label><input type="checkbox" id="leftClose">X on left</label></li>
+              </ul>
             </div>
             <button class="collapsible js--arrow-icon-4  ui-section"><i class="ion-ios-arrow-right icon-small"></i>Toolbars</button>
             <div class="content">
-              <li><input type="checkbox" id="bookmarksNewTab">Bookmarks Bar Only on New Tab</li>
-              <li><input type="checkbox" id="autoHide">Auto-hide Bookmarks and Url</li>
-              <li><input type="checkbox" id="slidingBookmarks">Sliding Bookmarks Bar</li>
+              <ul style="list-style-type:none">
+                <li><label><input type="checkbox" id="bookmarksNewTab">Bookmarks Bar Only on New Tab</label></li>
+                <li><label><input type="checkbox" id="autoHide">Auto-hide Bookmarks and Url</label></li>
+                <li><label><input type="checkbox" id="slidingBookmarks">Sliding Bookmarks Bar</label></li>
+              </ul>
             </div>
             <button class="collapsible js--arrow-icon-5  ui-section"><i class="ion-ios-arrow-right icon-small"></i>Sidebar</button>
             <div class="content">
-              <li><input type="checkbox" id="hideSidebar">Auto Hide Sidebar</li>
+              <ul style="list-style-type:none">
+                <li><label><input type="checkbox" id="hideSidebar">Auto Hide Sidebar</label></li>
+              </ul>
             </div>
           </div>
           <div class="col span-2-of-3 cm-box">
