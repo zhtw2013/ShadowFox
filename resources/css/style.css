@@ -17,7 +17,7 @@ Purple color: #66317c
 html, body {
   background-color: #121212;
   color: #939393;
-  font-family: 'LatoWebLight', 'Arial', sans-serif;
+  font-family: 'LatoWebLight', sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-rendering: optimizeLegibility;
