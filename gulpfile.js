@@ -41,8 +41,8 @@ gulp.task('critical', function () {
 });
 
 gulp.task('purify', function() {
-  return gulp.src('vendors/css/combined.css')
-    .pipe(purify(['vendors/js/*.js', 'resources/js/*.js', 'basic.js']))
+  return gulp.src('vendors/css/ionicons.css')
+    .pipe(purify(['index.html']))
     .pipe(gulp.dest(function(file) {
       return file.base;
     }));
