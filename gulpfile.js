@@ -49,4 +49,4 @@ gulp.task('purify', function() {
 });
 
 
-gulp.task('publish', gulp.series('combine', 'minify-css', 'critical', 'purify'));
+gulp.task('publish', gulp.series('combine', 'purify', 'minify-css', 'critical'));
